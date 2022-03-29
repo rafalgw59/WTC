@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import {RouterModule} from "@angular/router";
 import {TranslateModule} from "@ngx-translate/core";
+import {LocalizeRouterModule} from "@gilsdav/ngx-translate-router";
 
 @NgModule({
     declarations: [
@@ -21,6 +22,7 @@ import {TranslateModule} from "@ngx-translate/core";
           component: HeaderComponent,
         },
       ]),
+      LocalizeRouterModule
     ]
 })
 export class HeaderModule { }
