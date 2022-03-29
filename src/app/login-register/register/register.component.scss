@@ -1,0 +1,14 @@
+@use '../../../styles/index' as const;
+
+.register-wrapper {
+  .register {
+    width: 70%;
+    position: relative;
+    transform: translateX(-50%);
+    left: 50%;
+
+    &__form {
+      gap: 0.5rem;
+    }
+  }
+}
