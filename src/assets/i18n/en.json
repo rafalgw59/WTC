@@ -1,0 +1,7 @@
+{
+  "ROUTES.login": "login",
+  "ROUTES.register": "register",
+
+  "TITLE-login": "Login",
+  "TITLE-register": "Register"
+}

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import {RouterModule} from "@angular/router";
+import {TranslateModule} from "@ngx-translate/core";
 
 @NgModule({
     declarations: [
@@ -12,6 +13,7 @@ import {RouterModule} from "@angular/router";
     ],
     imports: [
       CommonModule,
+      TranslateModule.forChild(),
       RouterModule,
       RouterModule.forChild([
         {

@@ -1,0 +1,7 @@
+{
+  "ROUTES.login": "logowanie",
+  "ROUTES.register": "rejestracja",
+
+  "TITLE-login": "Logowanie",
+  "TITLE-register": "Rejestracja"
+}
