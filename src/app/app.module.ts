@@ -7,6 +7,10 @@ import { AppComponent } from './app.component';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import {environment} from 'src/environments/environment.prod';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {HeaderModule} from "./header/header.module";
+import {FooterModule} from "./footer/footer.module";
+import {LoginRegisterModule} from "./login-register/login-register.module";
 
 @NgModule({
   declarations: [
@@ -16,7 +20,11 @@ import {environment} from 'src/environments/environment.prod';
     BrowserModule,
     AppRoutingModule,
     AngularFireDatabaseModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig)
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    NgbModule,
+    HeaderModule,
+    FooterModule,
+    LoginRegisterModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
