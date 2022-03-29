@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import {RouterModule} from "@angular/router";
+import {TranslateModule} from "@ngx-translate/core";
+import {LocalizeRouterModule} from "@gilsdav/ngx-translate-router";
 
 @NgModule({
     declarations: [
@@ -12,6 +14,7 @@ import {RouterModule} from "@angular/router";
     ],
     imports: [
       CommonModule,
+      TranslateModule.forChild(),
       RouterModule,
       RouterModule.forChild([
         {
@@ -19,6 +22,7 @@ import {RouterModule} from "@angular/router";
           component: HeaderComponent,
         },
       ]),
+      LocalizeRouterModule
     ]
 })
 export class HeaderModule { }

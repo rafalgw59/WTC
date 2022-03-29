@@ -2,6 +2,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { LoginComponent } from './login/login.component';
 import {RegisterComponent} from "./register/register.component";
+import {LocalizeRouterModule} from "@gilsdav/ngx-translate-router";
 
 const routes: Routes = [
   {
@@ -14,7 +15,7 @@ const routes: Routes = [
 },];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  imports: [RouterModule.forChild(routes), LocalizeRouterModule.forChild(routes)],
   exports: [RouterModule]
 })
 export class LoginRegisterRoutingModule {}
