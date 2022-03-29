@@ -1,0 +1,13 @@
+{
+  "ROUTES.login": "login",
+  "ROUTES.register": "register",
+  "ROUTES.home": "home",
+
+  "TITLE-login": "Login",
+  "TITLE-register": "Register",
+  "TITLE-home": "Home",
+
+  "LOGIN-login-button": "Login",
+
+  "REGISTER-register-button": "Create account!"
+}

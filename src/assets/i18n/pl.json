@@ -1,0 +1,13 @@
+{
+  "ROUTES.login": "logowanie",
+  "ROUTES.register": "rejestracja",
+  "ROUTES.home": "strona-glowna",
+
+  "TITLE-login": "Logowanie",
+  "TITLE-register": "Rejestracja",
+  "TITLE-home": "Strona Główna",
+
+  "LOGIN-login-button": "Zaloguj się",
+
+  "REGISTER-register-button": "Zarejestruj się"
+}

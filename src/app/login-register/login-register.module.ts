@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login/login.component';
 import { LoginRegisterRoutingModule } from './login-register-routing.module';
 import { RegisterComponent } from './register/register.component';
+import {TranslateModule} from "@ngx-translate/core";
 
 @NgModule({
     declarations: [
@@ -14,6 +15,7 @@ import { RegisterComponent } from './register/register.component';
     ],
     imports: [
         CommonModule,
+        TranslateModule.forChild(),
         LoginRegisterRoutingModule
     ]
 })
