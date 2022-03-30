@@ -1,7 +1,7 @@
 # Work Time Clock
 ## Technology Stack:
 - Frontend:
-  - Angular 11
+  - Angular
   - SASS
   - Bootstrap 4
 - Backend:
