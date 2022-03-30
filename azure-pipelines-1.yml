@@ -27,7 +27,7 @@ steps:
 - task: CopyFilesOverSSH@0
   displayName: 'Deploy to server'
   inputs:
-    sshEndpoint: root@zegarek.cc
+    sshEndpoint: zegarek-ssh
     sourceFolder: './dist/wtc/'
     targetFolder: /var/www/zegarek/
     cleanTargetFolder: true
