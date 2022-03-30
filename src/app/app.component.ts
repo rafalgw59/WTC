@@ -12,6 +12,5 @@ export class AppComponent {
     translate.addLangs(['pl', 'en']);
     translate.setDefaultLang('pl');
   }
-  title = 'WTC';
 }
 
