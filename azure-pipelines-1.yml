@@ -24,6 +24,12 @@ steps:
     ls ./dist/wtc/
   displayName: 'List contents'
 
-- script: |
-    rsync ./dist/wtc/ root@zegarek.cc:/var/www/zegarek
+- task: CopyFilesOverSSH@0
   displayName: 'Deploy to server'
+  inputs:
+    sshEndpoint: root@zegarek.cc
+    sourceFolder: './dist/wtc/'
+    targetFolder: /var/www/zegarek/
+    cleanTargetFolder: true
+    failOnEmptySource: true
+
