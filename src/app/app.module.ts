@@ -1,19 +1,22 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
-import { AngularFireModule } from '@angular/fire/compat';
-import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
-import {environment} from 'src/environments/environment.prod';
+import { environment } from 'src/environments/environment';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import {HeaderModule} from "./header/header.module";
-import {FooterModule} from "./footer/footer.module";
-import {LoginRegisterModule} from "./login-register/login-register.module";
-import {HttpClient, HttpClientModule} from "@angular/common/http";
-import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
-import {TranslateHttpLoader} from "@ngx-translate/http-loader";
+import { HeaderModule } from './header/header.module';
+import { FooterModule } from './footer/footer.module';
+import { LoginRegisterModule } from './login-register/login-register.module';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFirestoreModule} from '@angular/fire/compat/firestore';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import {AuthService} from "./logic/services/auth.service";
+
 
 @NgModule({
   declarations: [
@@ -22,8 +25,11 @@ import {TranslateHttpLoader} from "@ngx-translate/http-loader";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AngularFireDatabaseModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
+    AngularFirestoreModule,
+    AngularFireStorageModule,
+    AngularFireDatabaseModule,
     NgbModule,
     HeaderModule,
     FooterModule,
@@ -37,8 +43,8 @@ import {TranslateHttpLoader} from "@ngx-translate/http-loader";
       }
     })
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [ AuthService, ],
+  bootstrap: [ AppComponent, ]
 })
 export class AppModule { }
 
