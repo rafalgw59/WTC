@@ -19,3 +19,7 @@ steps:
     npm install
     npm run build
   displayName: 'npm install and build'
+
+- script: |
+    rsync ./dist/wtc/ root@zegarek.cc:/var/www/zegarek
+  displayName: 'Deploy to server'
