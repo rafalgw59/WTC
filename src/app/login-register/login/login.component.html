@@ -3,17 +3,18 @@
     <div class="login__title">
       <h3>{{ 'TITLE-login' | translate }}</h3>
     </div>
-    <div class="login__form d-flex flex-column">
+    <div class="login__form d-flex flex-column" (keyup.enter)="authService.signIn(email.value, password.value, '')">
       <div class="login__form__username">
-        <input type="text" #username>
+        <input type="text" [placeholder]="'LOGIN-placeholder-email' | translate" #email>
       </div>
       <div class="login__form__password">
-        <input type="password" #password>
+        <input type="password" [placeholder]="'LOGIN-placeholder-password' | translate" #password>
       </div>
       <div class="login__form__submit d-flex justify-content-center">
-        <button (click)="submitLogin(username.value, password.value)"
+        <button (click)="authService.signIn(email.value, password.value, '')"
                 class="login__form__submit__btn">{{ 'LOGIN-login-button' | translate }}</button>
       </div>
     </div>
   </div>
 </div>
+
