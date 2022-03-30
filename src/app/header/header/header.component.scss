@@ -14,9 +14,26 @@
         color: const.$main-white;
         text-decoration: none;
         border-radius: 5px;
-        
+
         &:hover {
           cursor: pointer;
+        }
+      }
+    }
+    &__links {
+      gap: 1rem;
+
+      &__logout {
+        * {
+          background-color: const.$main-white;
+          border: none;
+          color: const.$main-blue-1;
+
+          &:hover {
+            cursor: pointer;
+            color: const.$main-blue-1-hover;
+            text-decoration: underline;
+          }
         }
       }
     }

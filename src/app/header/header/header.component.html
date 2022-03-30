@@ -6,14 +6,20 @@
       </a>
     </div>
     <div class="header__links d-flex pr-3">
-      <div class="header__links__home pr-3">
+      <div class="header__links__home">
         <a [routerLink]="''">{{ 'TITLE-home' | translate }}</a>
       </div>
-      <div class="header__links__login pr-3">
+      <div class="header__links__login" *ngIf="!authService.isLoggedIn">
         <a [routerLink]="['/login' | localize]">{{ 'TITLE-login' | translate }}</a>
       </div>
-      <div class="header__links__register">
+      <div class="header__links__register" *ngIf="!authService.isLoggedIn">
         <a [routerLink]="['/register' | localize]">{{ 'TITLE-register' | translate }}</a>
+      </div>
+      <div class="header__links__user-panel" *ngIf="authService.isLoggedIn">
+        <a [routerLink]="['/user-account' | localize]"> {{ 'TITLE-user-account' | translate }} </a>
+      </div>
+      <div class="header__links__logout" *ngIf="authService.isLoggedIn">
+        <div (click)="authService.signOut()">Wyloguj</div>
       </div>
     </div>
   </div>
