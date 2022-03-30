@@ -12,3 +12,25 @@
     }
   }
 }
+
+.register-modal {
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  transform: translateX(-50%);
+  height: 30vh;
+  width: 50vh;
+  background-color: lime;
+  padding: 2rem;
+  border-radius: 15px;
+
+  &__confirm-button {
+    position: absolute;
+    bottom: 0;
+    background: #1c7430;
+    width: 40%;
+    color: const.$main-white;
+    border-radius: 5px;
+    text-align: center;
+  }
+}
