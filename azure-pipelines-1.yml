@@ -20,6 +20,10 @@ steps:
     npm run build
   displayName: 'npm install and build'
 
+  - script: |
+    ls ./dist/wtc/
+  displayName: 'List contents'
+
 - script: |
     rsync ./dist/wtc/ root@zegarek.cc:/var/www/zegarek
   displayName: 'Deploy to server'
