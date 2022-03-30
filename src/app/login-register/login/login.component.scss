@@ -1,0 +1,14 @@
+@use '../../../styles/index' as const;
+
+.login-wrapper {
+  .login {
+    width: 70%;
+    position: relative;
+    transform: translateX(-50%);
+    left: 50%;
+
+    &__form {
+      gap: 0.5rem;
+    }
+  }
+}

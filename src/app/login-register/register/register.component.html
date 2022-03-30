@@ -1,1 +1,25 @@
-<div>{{ 'TITLE-register' | translate }}</div>
+<div class="register-wrapper">
+  <div class="register d-flex flex-column align-items-center">
+    <div class="register__title">
+      <h3>{{ 'TITLE-register' | translate }}</h3>
+    </div>
+    <div class="register__form d-flex flex-column">
+      <div class="register__form__name">
+        <input type="text" #name>
+      </div>
+      <div class="register__form__username">
+        <input type="text" #username>
+      </div>
+      <div class="register__form__email">
+        <input type="text" #email>
+      </div>
+      <div class="register__form__password">
+        <input type="password" #password>
+      </div>
+      <div class="register__form__submit d-flex justify-content-center">
+        <button (click)="submitRegister(name.value, username.value, email.value, password.value)"
+                class="register__form__submit__btn">{{ 'REGISTER-register-button' | translate }}</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+@use '../../../styles/index' as const;
+
+.header-wrapper {
+  .header {
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px solid const.$main-gray-1;
+
+    &__logo {
+      &__box {
+        height: 30px;
+        width: 120px;
+        background-color: const.$main-gray-2;
+        color: const.$main-white;
+        text-decoration: none;
+        border-radius: 5px;
+        
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
