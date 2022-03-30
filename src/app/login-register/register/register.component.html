@@ -5,21 +5,26 @@
     </div>
     <div class="register__form d-flex flex-column">
       <div class="register__form__name">
-        <input type="text" #name>
-      </div>
-      <div class="register__form__username">
-        <input type="text" #username>
+        <input type="text" [placeholder]="'REGISTER-placeholder-name' | translate" #name>
       </div>
       <div class="register__form__email">
-        <input type="text" #email>
+        <input type="text" [placeholder]="'REGISTER-placeholder-email' | translate" #email>
       </div>
       <div class="register__form__password">
-        <input type="password" #password>
+        <input type="password" [placeholder]="'REGISTER-placeholder-password' | translate" #password>
       </div>
       <div class="register__form__submit d-flex justify-content-center">
-        <button (click)="submitRegister(name.value, username.value, email.value, password.value)"
+        <button (click)="authService.signUp(email.value, password.value, name.value)"
                 class="register__form__submit__btn">{{ 'REGISTER-register-button' | translate }}</button>
       </div>
     </div>
   </div>
+</div>
+
+<div *ngIf="authService.showVerificationModal"
+     class="register-modal d-flex flex-column align-items-center">
+  <div>{{ 'REGISTER-success-modal-content' | translate }}</div>
+  <a class="register-modal__confirm-button mb-2" [routerLink]="['' | localize]">
+    {{ 'REGISTER-success-modal-button' | translate }}
+  </a>
 </div>

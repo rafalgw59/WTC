@@ -3,7 +3,9 @@ import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login/login.component';
 import { LoginRegisterRoutingModule } from './login-register-routing.module';
 import { RegisterComponent } from './register/register.component';
-import {TranslateModule} from "@ngx-translate/core";
+import { TranslateModule } from "@ngx-translate/core";
+import { AuthModule } from "@angular/fire/auth";
+import {LocalizeRouterModule} from "@gilsdav/ngx-translate-router";
 
 @NgModule({
     declarations: [
@@ -16,7 +18,9 @@ import {TranslateModule} from "@ngx-translate/core";
     imports: [
         CommonModule,
         TranslateModule.forChild(),
-        LoginRegisterRoutingModule
+        LoginRegisterRoutingModule,
+        AuthModule,
+        LocalizeRouterModule,
     ]
 })
 export class LoginRegisterModule { }

@@ -2,12 +2,23 @@
   "ROUTES.login": "login",
   "ROUTES.register": "register",
   "ROUTES.home": "home",
+  "ROUTES.user-account": "user-account",
 
   "TITLE-login": "Login",
   "TITLE-register": "Register",
   "TITLE-home": "Home",
+  "TITLE-user-account": "User account",
 
   "LOGIN-login-button": "Login",
+  "LOGIN-placeholder-email": "Email Address",
+  "LOGIN-placeholder-password": "Password",
 
-  "REGISTER-register-button": "Create account!"
+  "REGISTER-register-button": "Create account!",
+  "REGISTER-placeholder-name": "Name",
+  "REGISTER-placeholder-username": "Username",
+  "REGISTER-placeholder-email": "Email Address",
+  "REGISTER-placeholder-password": "Password",
+
+  "REGISTER-success-modal-content": "Account successfully created. Verify your email address and log in.",
+  "REGISTER-success-modal-button": "OK"
 }

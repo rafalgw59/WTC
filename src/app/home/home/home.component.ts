@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {AuthService} from "../../logic/services/auth.service";
+import {filter, map, Observable, Subscription} from "rxjs";
 
 @Component({
   selector: 'app-home',
@@ -6,11 +8,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  public userData$: Observable<any> = new Observable<any>();
+  public userName: string = '';
+  public subscriptions$ = new Subscription();
 
-  constructor() { }
+  constructor(public authService: AuthService) { }
 
   ngOnInit(): void {
-    console.log('home load');
+    this.userData$ = this.authService.getUserData$();
+    this.subscriptions$.add(
+      this.userData$.pipe(filter((data) => !!data)).subscribe((usr) => {
+        if (usr) {
+          this.userName = usr.displayName;
+        }
+      }));
   }
 
 }
