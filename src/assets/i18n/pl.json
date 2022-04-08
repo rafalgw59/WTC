@@ -20,5 +20,9 @@
   "REGISTER-placeholder-password": "Hasło",
 
   "REGISTER-success-modal-content": "Pomyślnie założono konto. Zweryfikuj swój adres email i się zaloguj",
-  "REGISTER-success-modal-button": "OK"
+  "REGISTER-success-modal-button": "OK",
+
+  "TIMETRACKER-current-time": "Pracujesz przez: ",
+  "TIMETRACKER-start-tracking": "Start",
+  "TIMETRACKER-stop-tracking": "Stop"
 }

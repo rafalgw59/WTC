@@ -1,0 +1,10 @@
+<div class="time-tracking-wrapper">
+  <div class="time-tracking">
+    <div class="time-tracking__controls">
+      <button (click)="!isWorking ? startTimeTracking() : stopTimeTracking()">
+        {{ !isWorking ? ('TIMETRACKER-start-tracking' | translate) : ('TIMETRACKER-stop-tracking') | translate }}
+      </button>
+    </div>
+    <div class="time-tracking__time-tracked">{{ ('TIMETRACKER-current-time' | translate) + timeTrackedDisplay}} </div>
+  </div>
+</div>
