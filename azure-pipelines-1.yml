@@ -26,7 +26,11 @@ steps:
   - script: |
       ls ./dist/wtc/
     displayName: 'List contents'
-
+    
+  - script: |
+      echo 'Unit tests'
+    displayName: 'Running tests'
+    
   - task: CopyFilesOverSSH@0
     displayName: 'Deploy to server'
     inputs:
