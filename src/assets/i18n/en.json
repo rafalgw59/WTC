@@ -20,5 +20,10 @@
   "REGISTER-placeholder-password": "Password",
 
   "REGISTER-success-modal-content": "Account successfully created. Verify your email address and log in.",
-  "REGISTER-success-modal-button": "OK"
+  "REGISTER-success-modal-button": "OK",
+
+  "TIMETRACKER-current-time": "You've worked for: ",
+  "TIMETRACKER-start-tracking": "Start",
+  "TIMETRACKER-stop-tracking": "Stop",
+  "TIMETRACKER-task-name-input": "Task Name"
 }
