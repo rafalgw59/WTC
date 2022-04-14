@@ -24,5 +24,6 @@
 
   "TIMETRACKER-current-time": "You've worked for: ",
   "TIMETRACKER-start-tracking": "Start",
-  "TIMETRACKER-stop-tracking": "Stop"
+  "TIMETRACKER-stop-tracking": "Stop",
+  "TIMETRACKER-task-name-input": "Task Name"
 }

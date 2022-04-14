@@ -39,7 +39,7 @@ export class AuthService {
       .signInWithEmailAndPassword(email, password)
       .then((result) => {
         this.ngZone.run(() => {
-          this.router.navigate([this.localize.translateRoute('')]);
+          window.location.href = this.localize.translateRoute('').toString();
         });
       })
       .catch((error) => {
@@ -65,7 +65,7 @@ export class AuthService {
   }
 
   setUserData(user: any, name: string) {
-    const userRef: AngularFirestoreDocument<any> = this.afs.doc(`users/${user.uid}`);
+    const userRef: AngularFirestoreDocument<any> = this.afs.doc(`users/${user.uid}/data/credentials`);
     const userData: UserModel = {
       uid: user.uid,
       email: user.email,
@@ -80,7 +80,7 @@ export class AuthService {
 
   public getUserData$(): Observable<any> {
     const userId = JSON.parse(localStorage.getItem('user')!)?.uid;
-    const userRef: AngularFirestoreDocument<any> = this.afs.doc(`users/${userId}`);
+    const userRef: AngularFirestoreDocument<any> = this.afs.doc(`users/${userId}/data/credentials`);
 
     return userRef.valueChanges();
   }
