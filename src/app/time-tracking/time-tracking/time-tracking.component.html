@@ -1,0 +1,21 @@
+<div class="time-tracking-wrapper">
+  <div class="time-tracking">
+    <div class="time-tracking__controls">
+      <input type="text" [placeholder]="'TIMETRACKER-task-name-input' | translate" #taskName>
+      <button (click)="!isWorking ? startTimeTracking(taskName.value) : stopTimeTracking()">
+        {{ !isWorking ? ('TIMETRACKER-start-tracking' | translate) : ('TIMETRACKER-stop-tracking') | translate }}
+      </button>
+    </div>
+    <div class="time-tracking__time-tracked">
+      {{ ('TIMETRACKER-current-time' | translate) + timeTrackedDisplay}}
+    </div>
+  </div>
+</div>
+
+<div class="history pt-5" *ngIf="allTrackings.length > 0">
+  <p>Przepracowane zadania:</p>
+  <div class="history__entry" *ngFor="let tracking of allTrackings">
+    <p>{{ tracking?.taskName + ' | ' + tracking?.duration.toString().split('.')[0] + ' sekund' }}</p>
+  </div>
+</div>
+

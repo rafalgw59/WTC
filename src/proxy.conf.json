@@ -1,0 +1,7 @@
+{
+  "/get_time": {
+    "target": "https://zegarek.cc/",
+    "secure": true
+  }
+
+}
