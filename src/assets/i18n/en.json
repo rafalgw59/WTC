@@ -8,6 +8,7 @@
   "TITLE-register": "Register",
   "TITLE-home": "Home",
   "TITLE-user-account": "User account",
+  "TITLE-portal-name": "zegarek.cc",
 
   "LOGIN-login-button": "Login",
   "LOGIN-placeholder-email": "Email Address",
@@ -25,5 +26,11 @@
   "TIMETRACKER-current-time": "You've worked for: ",
   "TIMETRACKER-start-tracking": "Start",
   "TIMETRACKER-stop-tracking": "Stop",
-  "TIMETRACKER-task-name-input": "Task Name"
+  "TIMETRACKER-task-name-input": "Task Name",
+
+  "TIMETRACKER-breaks-label": "Break every",
+  "TIMETRACKER-breaks-15": "15 minutes",
+  "TIMETRACKER-breaks-30": "30 minutes",
+  "TIMETRACKER-breaks-45": "45 minutes",
+  "TIMETRACKER-breaks-60": "1 hour"
 }
