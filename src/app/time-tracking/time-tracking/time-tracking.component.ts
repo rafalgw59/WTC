@@ -34,6 +34,10 @@ export class TimeTrackingComponent implements OnInit {
   public startTimeTracking(taskName: string): void {
     this.isWorking = true;
 
+    if (taskName.length < 1) {
+      taskName = 'Puste zadanie';
+    }
+
     setInterval(() => {
       if (this.isWorking) {
         this.timeTrackedSeconds += 1
@@ -77,7 +81,9 @@ export class TimeTrackingComponent implements OnInit {
       }
     });
 
+    this.isWorking = false;
     this.timeTrackedDisplay = '00:00';
+    this.timeTrackedSeconds = 0;
   }
 
   public formatMiliseconds(ms: number): string {
