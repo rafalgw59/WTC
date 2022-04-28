@@ -1,21 +1,34 @@
-<div class="time-tracking-wrapper">
-  <div class="time-tracking">
+<div class="time-tracking-wrapper d-flex justify-content-center pt-3">
+  <div class="time-tracking d-flex justify-content-center align-items-center flex-column">
     <div class="time-tracking__controls">
       <input type="text" [placeholder]="'TIMETRACKER-task-name-input' | translate" #taskName>
+    </div>
+    <div class="time-tracking__time font-weight-bold">
+      {{ ('TIMETRACKER-current-time' | translate) + timeTrackedDisplay}}
+    </div>
+
+    <div class="time-tracking__start">
       <button (click)="!isWorking ? startTimeTracking(taskName.value) : stopTimeTracking()">
         {{ !isWorking ? ('TIMETRACKER-start-tracking' | translate) : ('TIMETRACKER-stop-tracking') | translate }}
       </button>
     </div>
-    <div class="time-tracking__time-tracked">
-      {{ ('TIMETRACKER-current-time' | translate) + timeTrackedDisplay}}
-    </div>
+  </div>
+  <div class="time-tracking__break d-flex flex-column">
+    <label for="break-times">{{ 'TIMETRACKER-breaks-label' | translate }}</label>
+    <select name="break-times" id="break-times">
+      <option value="15">{{ 'TIMETRACKER-breaks-15' | translate }}</option>
+      <option value="30">{{ 'TIMETRACKER-breaks-30' | translate }}</option>
+      <option value="45">{{ 'TIMETRACKER-breaks-45' | translate }}</option>
+      <option value="60">{{ 'TIMETRACKER-breaks-60' | translate }}</option>
+    </select>
   </div>
 </div>
 
-<div class="history pt-5" *ngIf="allTrackings.length > 0">
-  <p>Przepracowane zadania:</p>
-  <div class="history__entry" *ngFor="let tracking of allTrackings">
+<div class="trackings__history pt-5" *ngIf="allTrackings.length > 0">
+  <h2 class="text-center">Przepracowane zadania:</h2>
+  <div class="trackings__history__entry" *ngFor="let tracking of allTrackings">
     <p>{{ tracking?.taskName + ' | ' + tracking?.duration.toString().split('.')[0] + ' sekund' }}</p>
   </div>
 </div>
+
 

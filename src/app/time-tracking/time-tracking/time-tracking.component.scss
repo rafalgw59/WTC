@@ -1,0 +1,62 @@
+@use '../../../styles/index' as const;
+
+.time-tracking-wrapper {
+  position: relative;
+
+  .time-tracking  {
+    position: relative;
+    width: 30vw;
+    height: 30vw;
+    background: const.$main-orange;
+    border-radius: 50%;
+    gap: 2rem;
+
+    &__break {
+      position: absolute;
+      right: 20%;
+    }
+
+    &__time {
+      color: const.$main-white;
+      font-size: 1.7rem;
+    }
+
+    &__start {
+      button {
+        border: 1px solid const.$main-white;
+        border-radius: 10px;
+        padding: 1rem 3rem;
+        background: transparent;
+
+        &:hover {
+          background: const.$main-orange-darker;
+          cursor: pointer;
+        }
+
+      }
+    }
+
+    &__controls {
+      input {
+        background: transparent;
+        border: none;
+        font-size: 1.7rem;
+        text-align: center;
+        border-bottom: 1px solid const.$main-dark;
+        color: const.$main-white;
+        outline: none;
+      }
+    }
+
+  }
+}
+
+.trackings  {
+  &__history {
+    &__entry {
+      padding: 2em 0;
+      border: 1px solid const.$main-dark;
+    }
+  }
+}
+

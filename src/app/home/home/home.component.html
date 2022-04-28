@@ -1,12 +1,18 @@
-Strona domowa
-<div class="halo" *ngIf="authService.isLoggedIn && userName !== ''">
-  Witaj, {{ userName }}
+<div class="home-page-wrapper">
+  <div class="home-page">
+    <div class="home-page__header home-page__header__is-logged" *ngIf="authService.isLoggedIn && userName !== ''">
+      <h2 class="text-center mt-2">Witaj, {{ userName }}! <br>
+        Dzisiaj jest {{ currentDate.toLocaleDateString('pl-PL', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) }} </h2>
+    </div>
+    <div class="home-page__header home-page__header__not-logged" *ngIf="!authService.isLoggedIn">
+      <h2 class="text-center mt-2">Dzisiaj jest {{ currentDate.toLocaleDateString('pl-PL',
+        { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) }}</h2>
+    </div>
+
+    <div class="home-page__time-tracking">
+      <app-time-tracking></app-time-tracking>
+    </div>
+  </div>
 </div>
 
-<div class="halo" *ngIf="!authService.isLoggedIn">
-  Użytkownik nieznajomy
-</div>
-
-
-<app-time-tracking></app-time-tracking>
 
