@@ -1,30 +1,28 @@
-import { Component, OnInit } from '@angular/core';
-import {AngularFireDatabase} from "@angular/fire/compat/database";
-import { TranslateService } from '@ngx-translate/core';
-import { environment } from "../environments/environment";
-import { getMessaging, getToken, onMessage } from "firebase/messaging";
-import { MessagingService } from './service/messaging.service';
+import { Component, OnInit } from '@angular/core'
+import { AngularFireDatabase } from '@angular/fire/compat/database'
+import { TranslateService } from '@ngx-translate/core'
+import { environment } from '../environments/environment'
+import { getMessaging, getToken, onMessage } from 'firebase/messaging'
+import { MessagingService } from './logic/services/messaging.service'
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements OnInit{
-  title = 'push-notification';
-  message:any;
-  constructor(public translate: TranslateService, private messagingService: MessagingService) {
-    translate.addLangs(['pl', 'en']);
-    translate.setDefaultLang('pl');
-  }
-  ngOnInit(): void {
-    this.messagingService.requestPermission()
-    this.messagingService.receiveMessage()
-    this.message = this.messagingService.currentMessage
-  }
- 
+export class AppComponent implements OnInit {
+    title = 'push-notification'
+    message: any
+    constructor(
+        public translate: TranslateService,
+        private messagingService: MessagingService
+    ) {
+        translate.addLangs(['pl', 'en'])
+        translate.setDefaultLang('pl')
+    }
+    ngOnInit(): void {
+        this.messagingService.requestPermission()
+        this.messagingService.receiveMessage()
+        this.message = this.messagingService.currentMessage
+    }
 }
-
-
-
-
