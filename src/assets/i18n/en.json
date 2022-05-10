@@ -1,0 +1,36 @@
+{
+  "ROUTES.login": "login",
+  "ROUTES.register": "register",
+  "ROUTES.home": "home",
+  "ROUTES.user-account": "user-account",
+
+  "TITLE-login": "Login",
+  "TITLE-register": "Register",
+  "TITLE-home": "Home",
+  "TITLE-user-account": "User account",
+  "TITLE-portal-name": "zegarek.cc",
+
+  "LOGIN-login-button": "Login",
+  "LOGIN-placeholder-email": "Email Address",
+  "LOGIN-placeholder-password": "Password",
+
+  "REGISTER-register-button": "Create account!",
+  "REGISTER-placeholder-name": "Name",
+  "REGISTER-placeholder-username": "Username",
+  "REGISTER-placeholder-email": "Email Address",
+  "REGISTER-placeholder-password": "Password",
+
+  "REGISTER-success-modal-content": "Account successfully created. Verify your email address and log in.",
+  "REGISTER-success-modal-button": "OK",
+
+  "TIMETRACKER-current-time": "You've worked for: ",
+  "TIMETRACKER-start-tracking": "Start",
+  "TIMETRACKER-stop-tracking": "Stop",
+  "TIMETRACKER-task-name-input": "Task Name",
+
+  "TIMETRACKER-breaks-label": "Break every",
+  "TIMETRACKER-breaks-15": "15 minutes",
+  "TIMETRACKER-breaks-30": "30 minutes",
+  "TIMETRACKER-breaks-45": "45 minutes",
+  "TIMETRACKER-breaks-60": "1 hour"
+}

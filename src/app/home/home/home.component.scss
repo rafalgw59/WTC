@@ -1,0 +1,10 @@
+@use '../../../styles/index' as const;
+
+
+.home-page-wrapper {
+  .home-page {
+    &__header {
+      color: const.$main-dark;
+    }
+  }
+}

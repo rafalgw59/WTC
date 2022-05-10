@@ -1,0 +1,27 @@
+<div class="header-wrapper">
+  <div class="header d-flex justify-content-between align-items-center px-3">
+
+    <a class="header__logo d-flex align-items-center" [routerLink]="['/' | localize]">
+      <img src="assets/gfx/logo/logo2.png">
+      <h1 class="my-0">{{ 'TITLE-portal-name' | translate }}</h1>
+    </a>
+
+    <div class="header__links d-flex pr-3">
+      <div class="header__links__home">
+        <a [routerLink]="''">{{ 'TITLE-home' | translate }}</a>
+      </div>
+      <div class="header__links__login" *ngIf="!authService.isLoggedIn">
+        <a [routerLink]="['/login' | localize]">{{ 'TITLE-login' | translate }}</a>
+      </div>
+      <div class="header__links__register" *ngIf="!authService.isLoggedIn">
+        <a [routerLink]="['/register' | localize]">{{ 'TITLE-register' | translate }}</a>
+      </div>
+      <div class="header__links__user-panel" *ngIf="authService.isLoggedIn">
+        <a [routerLink]="['/user-account' | localize]"> {{ 'TITLE-user-account' | translate }} </a>
+      </div>
+      <div class="header__links__logout" *ngIf="authService.isLoggedIn">
+        <div (click)="authService.signOut()">Wyloguj</div>
+      </div>
+    </div>
+  </div>
+</div>
