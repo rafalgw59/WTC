@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {AngularFirestore} from "@angular/fire/compat/firestore";
 import {first, map} from "rxjs";
+import {doc} from "@angular/fire/firestore";
 
 
 @Component({
@@ -34,12 +35,20 @@ export class AdminPanelComponent implements OnInit {
       userDataCollectionRef.get().then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
           this.allUsersData.push(doc?.data())
+          console.log(doc?.data())
         });
       });
     }
 
   }
 
+  public removeUser(uid: string) {
+    let user = document.getElementById(uid);
+    if (user) {
+      user.classList.remove('d-flex');
+      user.classList.add('d-none');
+    }
+  }
 
 
 

@@ -4,13 +4,22 @@
       <h1>{{ 'TITLE-admin' | translate }}</h1>
     </div>
 
-    <div class="admin-panel__users-list" >
+    <div class="admin-panel__users-list mt-3">
       <div class="admin-panel__users-list__header">
         <h2>{{ 'ADMIN-users-list' | translate }}</h2>
       </div>
+
       <div class="admin-panel__users-list__users" *ngFor="let user of allUsersData">
-        <div class="admin-panel__users-list__users__user">
-          {{user.email}}
+        <div class="admin-panel__users-list__users__user d-flex" [id]="user.uid">
+          <div class="admin-panel__users-list__users__user__name">
+            {{user?.displayName}}
+          </div>
+          <div class="admin-panel__users-list__users__user__email">
+            {{user?.email}}
+          </div>
+          <div class="admin-panel__users-list__users__user__delete">
+            <button (click)="removeUser(user.uid)">X</button>
+          </div>
         </div>
       </div>
     </div>

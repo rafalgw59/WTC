@@ -11,5 +11,16 @@
         font-size: 2rem;
       }
     }
+    &__users-list {
+      h2 {
+        font-size: 1.7rem;
+        color: const.$main-dark;
+      }
+      &__users {
+        &__user {
+          gap: 1rem;
+        }
+      }
+    }
   }
 }

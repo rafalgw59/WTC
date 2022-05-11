@@ -34,5 +34,8 @@
   "TIMETRACKER-breaks-15": "15 minutes",
   "TIMETRACKER-breaks-30": "30 minutes",
   "TIMETRACKER-breaks-45": "45 minutes",
-  "TIMETRACKER-breaks-60": "1 hour"
+  "TIMETRACKER-breaks-60": "1 hour",
+
+  "ADMIN-users-list": "Users list"
+
 }
