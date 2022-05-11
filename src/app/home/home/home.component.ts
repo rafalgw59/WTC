@@ -11,8 +11,11 @@ export class HomeComponent implements OnInit {
   public userData$: Observable<any> = new Observable<any>();
   public userName: string = '';
   public subscriptions$ = new Subscription();
+  public currentDate = new Date();
 
-  constructor(public authService: AuthService) { }
+  constructor(public authService: AuthService) {
+    this.currentDate = new Date();
+  }
 
   ngOnInit(): void {
     this.userData$ = this.authService.getUserData$();

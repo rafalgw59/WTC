@@ -8,6 +8,7 @@
   "TITLE-register": "Rejestracja",
   "TITLE-home": "Strona Główna",
   "TITLE-user-account": "Konto użytkownika",
+  "TITLE-portal-name": "zegarek.cc",
 
   "LOGIN-login-button": "Zaloguj się",
   "LOGIN-placeholder-email": "Adres email",
@@ -20,5 +21,16 @@
   "REGISTER-placeholder-password": "Hasło",
 
   "REGISTER-success-modal-content": "Pomyślnie założono konto. Zweryfikuj swój adres email i się zaloguj",
-  "REGISTER-success-modal-button": "OK"
+  "REGISTER-success-modal-button": "OK",
+
+  "TIMETRACKER-current-time": "Pracujesz przez: ",
+  "TIMETRACKER-start-tracking": "Start",
+  "TIMETRACKER-stop-tracking": "Stop",
+  "TIMETRACKER-task-name-input": "Nazwa zadania",
+
+  "TIMETRACKER-breaks-label": "Przerwa co",
+  "TIMETRACKER-breaks-15": "15 minut",
+  "TIMETRACKER-breaks-30": "30 minut",
+  "TIMETRACKER-breaks-45": "45 minut",
+  "TIMETRACKER-breaks-60": "1 godzina"
 }
