@@ -1,0 +1,15 @@
+@use '../../../styles/index' as const;
+
+.admin-panel-wrapper {
+  padding: 0 2rem;
+  margin-top: 1rem;
+
+  .admin-panel {
+    &__header {
+      h1 {
+        color: const.$main-dark;
+        font-size: 2rem;
+      }
+    }
+  }
+}
