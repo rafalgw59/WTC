@@ -10,21 +10,36 @@ import {first, map} from "rxjs";
 })
 export class AdminPanelComponent implements OnInit {
 
-  public allUsers: any = []
+  public allUsersIds: any = []
+  public allUsersData: any = [];
 
   constructor(public afs: AngularFirestore) { }
 
   ngOnInit(): void {
-    this.getAllUsers().then();
-    console.log(this.allUsers)
+    this.getAllUsersIds().then();
   }
 
-  async getAllUsers() {
+  async getAllUsersIds() {
     const snapshot = await this.afs.firestore.collection('users').get()
     snapshot.docs.forEach((d) => {
-     this.allUsers.push(d.id);
+     this.allUsersIds.push(d.id);
+     this.getUserData(d.id);
     })
   }
+
+
+  public getUserData(uid: string) {
+    const userDataCollectionRef = this.afs.firestore.collection(`users/${uid}/data/`);
+    if (uid) {
+      userDataCollectionRef.get().then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+          this.allUsersData.push(doc?.data())
+        });
+      });
+    }
+
+  }
+
 
 
 
