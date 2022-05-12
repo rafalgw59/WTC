@@ -15,11 +15,11 @@
   </div>
   <div class="time-tracking__break d-flex flex-column">
     <label for="break-times">{{ 'TIMETRACKER-breaks-label' | translate }}</label>
-    <select name="break-times" id="break-times">
-      <option value="15">{{ 'TIMETRACKER-breaks-15' | translate }}</option>
-      <option value="30">{{ 'TIMETRACKER-breaks-30' | translate }}</option>
-      <option value="45">{{ 'TIMETRACKER-breaks-45' | translate }}</option>
-      <option value="60">{{ 'TIMETRACKER-breaks-60' | translate }}</option>
+
+    <select id="break-times" (change)="onBreakTimeValueChange($event.target)">
+      <option [value]="o.value" *ngFor="let o of options">
+        {{ o.name | translate }}
+      </option>
     </select>
   </div>
 </div>
@@ -30,5 +30,3 @@
     <p>{{ tracking?.taskName + ' | ' + tracking?.duration.toString().split('.')[0] + ' sekund' }}</p>
   </div>
 </div>
-
-

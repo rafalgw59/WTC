@@ -29,6 +29,8 @@
   "TIMETRACKER-task-name-input": "Task Name",
 
   "TIMETRACKER-breaks-label": "Break every",
+  "TIMETRACKER-breaks-5": "5 seconds",
+  "TIMETRACKER-breaks-10": "10 seconds",
   "TIMETRACKER-breaks-15": "15 minutes",
   "TIMETRACKER-breaks-30": "30 minutes",
   "TIMETRACKER-breaks-45": "45 minutes",
