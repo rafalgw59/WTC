@@ -1,0 +1,26 @@
+@use '../../../styles/index' as const;
+
+.admin-panel-wrapper {
+  padding: 0 2rem;
+  margin-top: 1rem;
+
+  .admin-panel {
+    &__header {
+      h1 {
+        color: const.$main-dark;
+        font-size: 2rem;
+      }
+    }
+    &__users-list {
+      h2 {
+        font-size: 1.7rem;
+        color: const.$main-dark;
+      }
+      &__users {
+        &__user {
+          gap: 1rem;
+        }
+      }
+    }
+  }
+}

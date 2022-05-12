@@ -18,6 +18,7 @@ import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import {AuthService} from "./logic/services/auth.service";
 import { AsyncPipe } from '../../node_modules/@angular/common';
+import {AdminPanelModule} from "./admin-panel/admin-panel.module";
 // import { MessagingService } from './service/messaging.service';
 
 @NgModule({
@@ -37,6 +38,7 @@ import { AsyncPipe } from '../../node_modules/@angular/common';
     HeaderModule,
     FooterModule,
     LoginRegisterModule,
+    AdminPanelModule,
     HttpClientModule,
     TranslateModule.forRoot({
       loader: {

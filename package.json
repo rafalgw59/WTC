@@ -28,6 +28,7 @@
     "@popperjs/core": "^2.10.2",
     "bootstrap": "^4.6.1",
     "firebase": "^9.6.10",
+    "firebase-admin": "^10.2.0",
     "node-notifier": "^10.0.1",
     "rxjs": "~7.5.0",
     "simple-web-notification": "^2.0.1",
