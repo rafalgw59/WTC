@@ -102,6 +102,10 @@ export class TimeTrackingComponent implements OnInit {
     this.isWorking = false;
     this.timeTrackedDisplay = '00:00';
     this.timeTrackedSeconds = 0;
+
+    setTimeout(() => {
+      window.location.reload();
+    }, 500);
   }
 
   public onBreakTimeValueChange(e: any) {
