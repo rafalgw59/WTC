@@ -3,7 +3,7 @@ import {AngularFireDatabase} from "@angular/fire/compat/database";
 import { TranslateService } from '@ngx-translate/core';
 import { environment } from "../environments/environment";
 import { getMessaging, getToken, onMessage } from "firebase/messaging";
-import { MessagingService } from './service/messaging.service';
+// import { MessagingService } from './service/messaging.service';
 
 @Component({
   selector: 'app-root',
@@ -13,14 +13,11 @@ import { MessagingService } from './service/messaging.service';
 export class AppComponent implements OnInit{
   title = 'push-notification';
   message:any;
-  constructor(public translate: TranslateService, private messagingService: MessagingService) {
+  constructor(public translate: TranslateService) {
     translate.addLangs(['pl', 'en']);
     translate.setDefaultLang('pl');
   }
   ngOnInit(): void {
-    this.messagingService.requestPermission()
-    this.messagingService.receiveMessage()
-    this.message = this.messagingService.currentMessage
   }
 
 }
