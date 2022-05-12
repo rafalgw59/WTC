@@ -3,12 +3,14 @@
   "ROUTES.register": "register",
   "ROUTES.home": "home",
   "ROUTES.user-account": "user-account",
+  "ROUTES.admin": "admin",
 
   "TITLE-login": "Login",
   "TITLE-register": "Register",
   "TITLE-home": "Home",
   "TITLE-user-account": "User account",
   "TITLE-portal-name": "zegarek.cc",
+  "TITLE-admin": "Admin Panel",
 
   "LOGIN-login-button": "Login",
   "LOGIN-placeholder-email": "Email Address",
@@ -32,5 +34,8 @@
   "TIMETRACKER-breaks-15": "15 minutes",
   "TIMETRACKER-breaks-30": "30 minutes",
   "TIMETRACKER-breaks-45": "45 minutes",
-  "TIMETRACKER-breaks-60": "1 hour"
+  "TIMETRACKER-breaks-60": "1 hour",
+
+  "ADMIN-users-list": "Users list"
+
 }

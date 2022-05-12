@@ -19,6 +19,7 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import {AuthService} from "./logic/services/auth.service";
 import { AsyncPipe } from '../../node_modules/@angular/common';
 import { MessagingService } from './service/messaging.service';
+import {AdminPanelModule} from "./admin-panel/admin-panel.module";
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { MessagingService } from './service/messaging.service';
     HeaderModule,
     FooterModule,
     LoginRegisterModule,
+    AdminPanelModule,
     HttpClientModule,
     TranslateModule.forRoot({
       loader: {
