@@ -16,7 +16,7 @@
   <div class="time-tracking__break d-flex flex-column">
     <label for="break-times">{{ 'TIMETRACKER-breaks-label' | translate }}</label>
 
-    <select id="break-times" (change)="onBreakTimeValueChange($event.target)">
+    <select name="break-times" id="break-times" (change)="onBreakTimeValueChange($event.target)">
       <option [value]="o.value" *ngFor="let o of options">
         {{ o.name | translate }}
       </option>
@@ -25,8 +25,8 @@
 </div>
 
 <div class="trackings__history pt-5" *ngIf="allTrackings.length > 0">
-  <h2 class="text-center">Przepracowane zadania:</h2>
+  <div class="gradient-border">Przepracowane zadania:</div>
   <div class="trackings__history__entry" *ngFor="let tracking of allTrackings">
-    <p>{{ tracking?.taskName + ' | ' + tracking?.duration.toString().split('.')[0] + ' sekund' }}</p>
+    <p><img src="assets/gfx/logo/tasks_c.png">{{ tracking?.taskName }}<br><img src="assets/gfx/logo/timer_c.png">{{tracking?.duration.toString().split('.')[0] + ' sekund' }}</p>
   </div>
 </div>
