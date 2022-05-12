@@ -31,6 +31,8 @@
   "TIMETRACKER-task-name-input": "Nazwa zadania",
 
   "TIMETRACKER-breaks-label": "Przerwa co",
+  "TIMETRACKER-breaks-5": "5 sekund",
+  "TIMETRACKER-breaks-10": "10 sekund",
   "TIMETRACKER-breaks-15": "15 minut",
   "TIMETRACKER-breaks-30": "30 minut",
   "TIMETRACKER-breaks-45": "45 minut",
