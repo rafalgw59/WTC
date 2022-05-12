@@ -19,6 +19,9 @@
       <div class="header__links__user-panel" *ngIf="authService.isLoggedIn">
         <a [routerLink]="['/user-account' | localize]"> {{ 'TITLE-user-account' | translate }} </a>
       </div>
+      <div class="header__links__user-panel" >
+        <a [routerLink]="['/admin' | localize]"> {{ 'TITLE-admin' | translate }} </a>
+      </div>
       <div class="header__links__logout" *ngIf="authService.isLoggedIn">
         <div (click)="authService.signOut()">Wyloguj</div>
       </div>
