@@ -1,4 +1,6 @@
 <div class="register-wrapper">
+  <div class="circle"></div>
+  <div class="circlel"></div>
   <div class="register d-flex flex-column align-items-center">
     <div class="register__title">
       <h3>{{ 'TITLE-register' | translate }}</h3>
@@ -17,6 +19,7 @@
         <button (click)="authService.signUp(email.value, password.value, name.value)"
                 class="register__form__submit__btn">{{ 'REGISTER-register-button' | translate }}</button>
       </div>
+      <div class="acc">{{'Masz już konto?' | translate}}<a [routerLink]="['/login' | localize]">{{ ' Zaloguj się' | translate}}</a> </div>
     </div>
   </div>
 </div>

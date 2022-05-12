@@ -2,6 +2,7 @@
 
 .register-wrapper {
   .register {
+    margin-top: 100px;
     width: 70%;
     position: relative;
     transform: translateX(-50%);
@@ -11,6 +12,78 @@
       gap: 0.5rem;
     }
   }
+
+  .acc {
+    text-align: left;
+    font-size: 12px;
+  }
+
+  .register__title{
+    color: RGB(71,82,94);
+  }
+
+  .register__form__submit button{
+    text-transform: uppercase;
+    font-weight: 200;
+    transition: all .4s;
+    margin-top: 3px;
+    padding-left: 70px;
+    padding-right: 70px;
+    color: white;
+    align-items: center;
+    background-color: RGB(71,82,94);
+    border: 2px solid white;
+    justify-content: center;
+    box-sizing: border-box;
+    border-radius: 10px;
+  }
+
+  .register__form__submit button:hover {
+    background-color: RGB(129,144,165);
+    border: 1px solid RGB(71,82,94);
+    color: white;
+  }
+
+  .register__form__name input[type='text'],
+  .register__form__email input[type='text'],
+  .register__form__password input[type='password'] {
+    padding-left: 10px;
+    padding-right: 60px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    background-color: white;
+    border: 2px solid RGB(193,200,210);
+    color: black;
+  }
+
+}
+.circle
+{
+  width: 300px;
+  height: 300px;
+  margin-top: 5%;
+  margin-left: 50%;
+  background: linear-gradient(45deg, RGB(129,144,165), black);
+  opacity: 0.25;
+  -moz-border-radius: 300px;
+  -webkit-border-radius: 300px;
+  border-radius: 300px;
+  position: absolute;
+}
+
+.circlel
+{
+  width: 200px;
+  height: 200px;
+  margin-top: 1%;
+  margin-left: 36%;
+  background: linear-gradient(45deg, black, RGB(71,82,94,));
+  opacity: 0.25;
+  -moz-border-radius: 300px;
+  -webkit-border-radius: 300px;
+  border-radius: 300px;
+  position: absolute;
 }
 
 .register-modal {
