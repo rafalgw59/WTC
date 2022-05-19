@@ -1,0 +1,140 @@
+@use '../../../styles/index' as const;
+
+.header-wrapper {
+  .header {
+    height: 60px;
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    border-bottom: 1px solid const.$main-gray-1;
+    background-color: RGB(71,82,94);
+    overflow: hidden;
+    position: relative;
+
+    &__logo {
+      -webkit-transition: 0.4s ease;
+      transition: 0.4s ease;
+
+      img {
+        object-fit: contain;
+        width: 45px;
+        margin-right: 1rem;
+      }
+    }
+
+    h1{
+      color: white;
+      font-family: Montserrat,"sans-serif";
+    }
+
+    .header__logo:hover{
+      text-decoration: none;
+      -webkit-transform: scale(1.08);
+      transform: scale(1.08);
+    }
+
+
+    .header__links__home a{
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+      font-family: Montserrat,"sans-serif";
+    }
+
+    .header__links__home a:hover{
+      color: RGB(71,82,94);
+      -webkit-transform: scale(1.08);
+      transform: scale(1.08);
+      background-color: white;
+      -webkit-transition: 0.4s ease;
+      transition: 0.4s ease;
+    }
+
+    .header__links__login a{
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+      font-family: Montserrat,"sans-serif";
+    }
+
+    .header__links__login a:hover{
+      color: RGB(71,82,94);
+      -webkit-transform: scale(1.08);
+      transform: scale(1.08);
+      background-color: white;
+      -webkit-transition: 0.4s ease;
+      transition: 0.4s ease;
+    }
+
+    .header__links__register a{
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+      font-family: Montserrat,"sans-serif";
+    }
+
+    .header__links__register a:hover{
+      color: RGB(71,82,94);
+      -webkit-transform: scale(1.08);
+      transform: scale(1.08);
+      background-color: white;
+      -webkit-transition: 0.4s ease;
+      transition: 0.4s ease;
+    }
+
+    .header__links__user-panel a{
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+      font-family: Montserrat,"sans-serif";
+    }
+
+    .header__links__user-panel a:hover{
+      color: RGB(71,82,94);
+      -webkit-transform: scale(1.08);
+      transform: scale(1.08);
+      background-color: white;
+      -webkit-transition: 0.4s ease;
+      transition: 0.4s ease;
+    }
+
+    .header__links__logout{
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+      font-family: Montserrat,"sans-serif";
+    }
+
+    .header__links__logout:hover{
+      color: RGB(71,82,94);
+      -webkit-transform: scale(1.08);
+      transform: scale(1.08);
+      background-color: white;
+      -webkit-transition: 0.4s ease;
+      transition: 0.4s ease;
+      cursor: pointer;
+    }
+
+  }
+
+}

@@ -1,0 +1,42 @@
+{
+  "ROUTES.login": "logowanie",
+  "ROUTES.register": "rejestracja",
+  "ROUTES.home": "strona-glowna",
+  "ROUTES.user-account": "konto-uzytkownika",
+  "ROUTES.admin": "admin",
+
+  "TITLE-login": "Logowanie",
+  "TITLE-register": "Rejestracja",
+  "TITLE-home": "Strona Główna",
+  "TITLE-user-account": "Konto użytkownika",
+  "TITLE-portal-name": "zegarek.cc",
+  "TITLE-admin": "Panel Administratora",
+
+  "LOGIN-login-button": "Zaloguj się",
+  "LOGIN-placeholder-email": "Adres email",
+  "LOGIN-placeholder-password": "Hasło",
+
+  "REGISTER-register-button": "Zarejestruj się",
+  "REGISTER-placeholder-name": "Imię",
+  "REGISTER-placeholder-username": "Nazwa użytkownika",
+  "REGISTER-placeholder-email": "Adres email",
+  "REGISTER-placeholder-password": "Hasło",
+
+  "REGISTER-success-modal-content": "Pomyślnie założono konto. Zweryfikuj swój adres email i się zaloguj",
+  "REGISTER-success-modal-button": "OK",
+
+  "TIMETRACKER-current-time": "Pracujesz przez: ",
+  "TIMETRACKER-start-tracking": "Start",
+  "TIMETRACKER-stop-tracking": "Stop",
+  "TIMETRACKER-task-name-input": "Nazwa zadania",
+
+  "TIMETRACKER-breaks-label": "Przerwa co",
+  "TIMETRACKER-breaks-5": "5 sekund",
+  "TIMETRACKER-breaks-10": "10 sekund",
+  "TIMETRACKER-breaks-15": "15 minut",
+  "TIMETRACKER-breaks-30": "30 minut",
+  "TIMETRACKER-breaks-45": "45 minut",
+  "TIMETRACKER-breaks-60": "1 godzina",
+
+  "ADMIN-users-list": "Lista użytkowników"
+}

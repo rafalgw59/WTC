@@ -1,0 +1,32 @@
+<div class="time-tracking-wrapper d-flex justify-content-center pt-3">
+  <div class="time-tracking d-flex justify-content-center align-items-center flex-column">
+    <div class="time-tracking__controls">
+      <input type="text" [placeholder]="'TIMETRACKER-task-name-input' | translate" #taskName>
+    </div>
+    <div class="time-tracking__time font-weight-bold">
+      {{ ('TIMETRACKER-current-time' | translate) + timeTrackedDisplay}}
+    </div>
+
+    <div class="time-tracking__start">
+      <button (click)="!isWorking ? startTimeTracking(taskName.value) : stopTimeTracking()">
+        {{ !isWorking ? ('TIMETRACKER-start-tracking' | translate) : ('TIMETRACKER-stop-tracking') | translate }}
+      </button>
+    </div>
+  </div>
+  <div class="time-tracking__break d-flex flex-column">
+    <label for="break-times">{{ 'TIMETRACKER-breaks-label' | translate }}</label>
+
+    <select name="break-times" id="break-times" (change)="onBreakTimeValueChange($event.target)">
+      <option [value]="o.value" *ngFor="let o of options">
+        {{ o.name | translate }}
+      </option>
+    </select>
+  </div>
+</div>
+
+<div class="trackings__history pt-5" *ngIf="allTrackings.length > 0">
+  <div class="gradient-border">Przepracowane zadania:</div>
+  <div class="trackings__history__entry" *ngFor="let tracking of allTrackings">
+    <p><img src="assets/gfx/logo/tasks_c.png">{{ tracking?.taskName }}<br><img src="assets/gfx/logo/timer_c.png">{{tracking?.duration.toString().split('.')[0] + ' sekund' }}</p>
+  </div>
+</div>
