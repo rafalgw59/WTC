@@ -2,7 +2,7 @@
   <div class="header d-flex justify-content-between align-items-center px-3">
 
     <a class="header__logo d-flex align-items-center" [routerLink]="['/' | localize]">
-      <img src="assets/gfx/logo/logo.png">
+      <img src="assets/gfx/logo/logo2.png">
       <h1 class="my-0">{{ 'TITLE-portal-name' | translate }}</h1>
     </a>
 
@@ -18,6 +18,9 @@
       </div>
       <div class="header__links__user-panel" *ngIf="authService.isLoggedIn">
         <a [routerLink]="['/user-account' | localize]"> {{ 'TITLE-user-account' | translate }} </a>
+      </div>
+      <div class="header__links__user-panel" >
+        <a [routerLink]="['/admin' | localize]"> {{ 'TITLE-admin' | translate }} </a>
       </div>
       <div class="header__links__logout" *ngIf="authService.isLoggedIn">
         <div (click)="authService.signOut()">Wyloguj</div>

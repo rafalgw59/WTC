@@ -19,10 +19,23 @@ export class TimeTrackingComponent implements OnInit {
 
   private userId: string = '';
   private trackingId: any = null;
+  private response = true;
+
+  public selectedOption = 5000
+
+  public options = [
+    { name: "TIMETRACKER-breaks-5", value: 5000 },
+    { name: "TIMETRACKER-breaks-10", value: 10000 },
+    { name: "TIMETRACKER-breaks-15", value: 15*60*1000 },
+    { name: "TIMETRACKER-breaks-30", value: 30*60*1000 },
+    { name: "TIMETRACKER-breaks-45", value: 45*60*1000 },
+    { name: "TIMETRACKER-breaks-60", value: 60*60*1000 },
+  ]
 
   constructor(public http_: HttpClient,
               public afs: AngularFirestore,
-              public timeDateService: TimeDateService) { }
+              public timeDateService: TimeDateService) {
+  }
 
   ngOnInit(): void {
     this.userId = JSON.parse(localStorage.getItem('user')!)?.uid;
@@ -32,6 +45,12 @@ export class TimeTrackingComponent implements OnInit {
 
 
   public startTimeTracking(taskName: string): void {
+    setTimeout(() => {
+      this.displayBreakNotification();
+    }, this.selectedOption);
+
+
+
     this.isWorking = true;
 
     if (taskName.length < 1) {
@@ -47,12 +66,12 @@ export class TimeTrackingComponent implements OnInit {
 
 
     this.timeDateService.getDateTime$().subscribe((d) => {
-      if (d) {
+      if (this.response) {
         this.trackingId = Date.now();
         const userRef: AngularFirestoreDocument<any> = this.afs.doc(`users/${this.userId}/tracking/${this.trackingId}`);
         const trackingData: TrackedTimeModel = {
           uid: this.userId,
-          startTime: d,
+          startTime: this.response,
           taskName: taskName
         };
 
@@ -84,6 +103,14 @@ export class TimeTrackingComponent implements OnInit {
     this.isWorking = false;
     this.timeTrackedDisplay = '00:00';
     this.timeTrackedSeconds = 0;
+
+    setTimeout(() => {
+      window.location.reload();
+    }, 500);
+  }
+
+  public onBreakTimeValueChange(e: any) {
+    this.selectedOption = (e.options[e.selectedIndex].value);
   }
 
   public formatMiliseconds(ms: number): string {
@@ -114,6 +141,21 @@ export class TimeTrackingComponent implements OnInit {
       taskName: tracking?.taskName,
       duration: (new Date(tracking?.stopTime).getTime() - new Date(tracking?.startTime).getTime()) / 1000 % 60,
     }
+  }
+
+  public displayBreakNotification() {
+
+    if(! ('Notification' in window) ){
+      console.log('Web Notification not supported');
+      return;
+    }
+
+    Notification.requestPermission(function(permission){
+      var notification = new Notification("Czas na przerwę",{body:'czas na KitKat', dir:'auto'});
+
+    });
+
+
   }
 
 }

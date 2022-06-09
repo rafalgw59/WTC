@@ -9,6 +9,6 @@ export class TimeDateService {
   constructor(public http_: HttpClient) { }
 
   public getDateTime$() {
-    return this.http_.get<any>('https://zegarek.cc/get_time', { responseType: 'text' as 'json'});
+    return this.http_.get<any>('', { responseType: 'text' as 'json'});
   }
 }

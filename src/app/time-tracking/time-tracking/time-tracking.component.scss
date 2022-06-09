@@ -7,13 +7,15 @@
     position: relative;
     width: 30vw;
     height: 30vw;
-    background: const.$main-orange;
+    background: linear-gradient(45deg, rgb(129,144,165), rgb(71,82,94,));
     border-radius: 50%;
     gap: 2rem;
+    font-family: Montserrat,"sans-serif";
 
     &__break {
       position: absolute;
-      right: 20%;
+      right: 25%;
+      font-family: Montserrat,"sans-serif";
     }
 
     &__time {
@@ -23,14 +25,18 @@
 
     &__start {
       button {
-        border: 1px solid const.$main-white;
+        -webkit-transition: 0.4s ease;
+        transition: 0.4s ease;
+        border: 1px solid rgb(129,144,165);
         border-radius: 10px;
         padding: 1rem 3rem;
         background: transparent;
+        color: white;
 
         &:hover {
-          background: const.$main-orange-darker;
+          background: rgb(129,144,165);
           cursor: pointer;
+          border: 1px solid white;
         }
 
       }
@@ -42,21 +48,129 @@
         border: none;
         font-size: 1.7rem;
         text-align: center;
-        border-bottom: 1px solid const.$main-dark;
-        color: const.$main-white;
+        border-bottom: 1px solid white;
+        color: white;
         outline: none;
+      }
+      input::placeholder{
+        color:white;
       }
     }
 
   }
+
+  .time-tracking__break select{
+    -webkit-transition: 0.4s ease;
+    transition: 0.4s ease;
+    background-color: RGB(93,106,121);
+    color: white;
+    padding: 12px;
+    border: none;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    -webkit-appearance: button;
+    appearance: button;
+    outline: none;
+    border-radius: 0px 0px 5px 5px;
+  }
+
+  .time-tracking__break::before{
+    content: "\f13a";
+    font-family: Montserrat,"sans-serif";
+    top: 0;
+    right: 0;
+    width: 15%;
+    height: 100%;
+    text-align: center;
+    line-height: 45px;
+    color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+
+  }
+
+  .time-tracking__break label{
+    background-color: RGB(93,106,121);
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 0px;
+    border-radius: 5px 5px 0px 0px;
+
+    box-shadow:
+            inset 0 0 50px rgb(71,82,94),
+            0 0 5px rgb(150, 148, 148),
+            -10px 0 80px rgb(166, 169, 206),
+            10px 0 80px rgb(150, 156, 165);
+
+  }
+
+  .time-tracking__break select:hover{
+    background: rgb(129,144,165);
+  }
+
+
 }
 
 .trackings  {
   &__history {
-    &__entry {
-      padding: 2em 0;
-      border: 1px solid const.$main-dark;
+    padding: 100px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    .gradient-border {
+
+      position: relative;
+
+      width: 50%;
+      margin-left: 25%;
+      margin-right: 25%;
+      color: white;
+      font-family: Montserrat,"sans-serif";
+      text-align: center;
+      margin-bottom: 10px;
+      border-radius: 50px 20px;
+      font-size: 18px;
+
+      box-shadow:
+              inset 0 0 50px rgb(71,82,94),
+              0 0 5px rgb(150, 148, 148),
+              -10px 0 80px rgb(166, 169, 206),
+              10px 0 80px rgb(150, 156, 165);
+    }
+
+    .trackings__history__entry {
+      color: RGB(71,82,94,);
+      margin-top: 3px;
+      width: 50%;
+      margin-left: 25%;
+      margin-right: 25%;
+
+    }
+
+    .trackings__history__entry p{
+      border-radius: 40px 20px;
+      text-transform: uppercase;
+      margin: 3px 0px 3px 0px;
+      text-align: center;
+      font-family: Montserrat,"sans-serif";
+
+      background: linear-gradient(45deg, RGB(215,215,215), RGB(195,195,195));
+    }
+
+    .trackings__history__entry :hover{
+      background: linear-gradient(45deg, RGB(195,195,195), RGB(215,215,215));
+      -webkit-transition: 0.4s ease;
+      transition: 0.4s ease;
+
+    }
+
+    img {
+      object-fit: contain;
+      width: 24px;
+      float: left;
+      margin-left: 20px;
     }
   }
 }
+
 

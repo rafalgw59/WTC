@@ -1,4 +1,6 @@
 <div class="login-wrapper">
+  <div class="circle"></div>
+  <div class="circlel"></div>
   <div class="login d-flex flex-column align-items-center">
     <div class="login__title">
       <h3>{{ 'TITLE-login' | translate }}</h3>
@@ -14,7 +16,11 @@
         <button (click)="authService.signIn(email.value, password.value, '')"
                 class="login__form__submit__btn">{{ 'LOGIN-login-button' | translate }}</button>
       </div>
+      <div class="no_acc">{{'Nie masz konta?' | translate}}<a [routerLink]="['/register' | localize]">{{' Zarejestruj się' | translate}}</a></div>
     </div>
   </div>
+
+
 </div>
+
 
