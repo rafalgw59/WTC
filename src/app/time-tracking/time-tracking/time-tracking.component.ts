@@ -19,6 +19,7 @@ export class TimeTrackingComponent implements OnInit {
 
   private userId: string = '';
   private trackingId: any = null;
+  private response = true;
 
   public selectedOption = 5000
 
@@ -65,12 +66,12 @@ export class TimeTrackingComponent implements OnInit {
 
 
     this.timeDateService.getDateTime$().subscribe((d) => {
-      if (d) {
+      if (this.response) {
         this.trackingId = Date.now();
         const userRef: AngularFirestoreDocument<any> = this.afs.doc(`users/${this.userId}/tracking/${this.trackingId}`);
         const trackingData: TrackedTimeModel = {
           uid: this.userId,
-          startTime: d,
+          startTime: this.response,
           taskName: taskName
         };
 
